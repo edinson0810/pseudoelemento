@@ -6,15 +6,22 @@
 
 *::selection {
   background: salmon;
+  
   color: white;
 }
 
 body {
-  background: salmon;
+  background: var(--backgroun);
+
   font-family: Arial, ;
 }
 
-
+:root{
+  --color1:color salmon;
+  --backgroun:salmon;
+  --backgraund2:green;
+  --transform: scale(1.2);
+}
 
 .card {
   width: 300px;
@@ -25,6 +32,16 @@ body {
   border-radius: 10px;
   padding-bottom: 7px;
   margin-bottom: 10px auto;
+  margin-top: 200px;
+
+ 
+}
+
+div:hover{
+  background: yellow;
+  transform: var(--transform);
+  box-shadow: -20px -20px 0px 0px navy;
+  filter: drop-shadow(10px 10px 2px black);
 }
 
 p::first-letter {
@@ -55,7 +72,7 @@ li {
 li::before {
   content: counter(contador);
   counter-increment: contador;
-  background: salmon;
+  background: var(--backgroun);
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -72,6 +89,11 @@ li::before {
   border-bottom: 0.5px;
 }
 
+h2:hover{
+  transform: scale(1.5);
+  color: navy;
+}
+
 .card-title::before,
 
 .card-title::after {
@@ -80,7 +102,24 @@ li::before {
   width: 10%;
   height: 3px;
   padding: 2px;
-  background: salmon;
+  background: var(--backgroun);
   margin-bottom: 3px;
 
 }
+
+li:hover{
+  transform: scale(1.2);
+  background: black;
+  color: salmon;
+}
+
+.card-title:hover:before,
+
+.card-title:hover::after {
+  content: "";
+  display: inline-block;
+  width: 10%;
+  height: 3px;
+  padding: 2px;
+  background: navy;
+  margin-bottom: 3px;}
